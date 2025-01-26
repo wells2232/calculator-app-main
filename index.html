@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <main>
+      <div class="title">
+        <h1>calc</h1>
+        <div class="theme-switcher">
+          <div class="theme-switcher__label">
+            <label for="theme-slider">1</label>
+            <label for="theme-slider">2</label>
+            <label for="theme-slider">3</label>
+          </div>
+
+          <div class="theme-switcher__slider">
+            <span>THEME</span>
+            <input type="range" min="1" max="3" value="1" id="theme-slider" />
+          </div>
+        </div>
+      </div>
+      <div class="calculator">
+        <div class="display">
+          <div class="display__output">0</div>
+        </div>
+      </div>
+      <div class="buttons">
+        <div>
+          <button id="seven">7</button>
+          <button id="eight">8</button>
+          <button id="nine">9</button>
+          <button id="delete">DEL</button>
+        </div>
+        <div>
+          <button id="four">4</button>
+          <button id="five">5</button>
+          <button id="six">6</button>
+          <button id="add">+</button>
+        </div>
+        <div>
+          <button id="one">1</button>
+          <button id="two">2</button>
+          <button id="three">3</button>
+          <button id="subtract">-</button>
+        </div>
+        <div>
+          <button id="dot">.</button>
+          <button id="zero">0</button>
+          <button id="divide">/</button>
+          <button id="multiply">x</button>
+        </div>
+        <div>
+          <button id="reset">RESET</button>
+          <button id="equal">=</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
