@@ -1,5 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 
+:root {
+  /* Background Colors */
+  --main-bg: hsl(222, 26%, 31%);
+  --toggle-bg: hsl(223, 31%, 20%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+
+  /* Key Colors */
+  --key-reset-bg: hsl(225, 21%, 49%);
+  --key-reset-shadow: hsl(224, 28%, 35%);
+  --key-equals-bg: hsl(6, 63%, 50%);
+  --key-equals-shadow: hsl(6, 70%, 34%);
+  --key-main-bg: hsl(29, 36%, 86%);
+  --key-main-shadow: hsl(28, 16%, 65%);
+  --number-hover: hsl(30, 25%, 89%);
+
+  /* Text Colors */
+  --text-primary: hsl(0, 0%, 100%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
+/* Theme 2 */
+[data-theme="theme-2"] {
+  --main-bg: hsl(0, 0%, 90%);
+  --toggle-bg: hsl(0, 5%, 81%);
+  --keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+
+  --key-reset-bg: hsl(185, 42%, 37%);
+  --key-reset-shadow: hsl(185, 58%, 25%);
+  --key-equals-bg: hsl(25, 98%, 40%);
+  --key-equals-shadow: hsl(25, 99%, 27%);
+  --key-main-bg: hsl(29, 36%, 86%);
+  --key-main-shadow: hsl(35, 11%, 61%);
+  --number-hover: hsl(45, 7%, 89%);
+
+  --text-primary: hsl(60, 10%, 19%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
+/* Theme 3 */
+[data-theme="theme-3"] {
+  --main-bg: hsl(268, 75%, 9%);
+  --toggle-bg: hsl(268, 71%, 12%);
+  --keypad-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+
+  --key-reset-bg: hsl(281, 89%, 26%);
+  --key-reset-shadow: hsl(285, 91%, 52%);
+  --key-equals-bg: hsl(176, 100%, 44%);
+  --key-equals-shadow: hsl(177, 92%, 70%);
+  --key-main-bg: hsl(268, 47%, 21%);
+  --key-main-shadow: hsl(290, 70%, 36%);
+  --number-hover: hsl(268, 52%, 52%);
+
+  --text-primary: hsl(52, 100%, 62%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +66,7 @@
 }
 
 body {
-  background-color: hsl(222, 26%, 31%);
+  background-color: var(--main-bg);
   color: #333;
   font-family: "League Spartan", sans-serif;
 }
@@ -28,7 +87,7 @@ main {
   align-items: end;
   justify-content: space-between;
   width: 100%;
-  color: hsl(0, 0%, 100%);
+  color: var(--text-white);
   font-size: 1rem;
 }
 
@@ -61,7 +120,7 @@ main {
   appearance: none;
   height: 24px;
   outline: none;
-  background: hsl(223, 31%, 20%);
+  background: var(--toggle-bg);
   border-radius: 9999px;
   padding: 0 5px 0 5px;
 }
@@ -71,33 +130,32 @@ main {
   appearance: none;
   width: 16px;
   height: 16px;
-  background-color: hsl(6, 63%, 50%);
+  background-color: var(--key-equals-bg);
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
 }
 
 .calculator {
-  background-color: hsl(224, 36%, 15%);
+  background-color: var(--screen-bg);
   border-radius: 10px;
   padding: 15px;
   gap: 15px;
   width: 100%;
 }
 
-.display {
-  background-color: hsl(224, 36%, 15%);
+.results {
   border-radius: 10px;
   padding: 15px;
   width: 100%;
   text-align: right;
   font-size: 2.5rem;
   font-weight: 700;
-  color: hsl(0, 0%, 100%);
+  color: var(--text-primary);
 }
 
 .buttons {
-  background-color: hsl(223, 31%, 20%);
+  background-color: var(--toggle-bg);
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -114,10 +172,10 @@ main {
 button {
   width: 100%;
   height: 40px;
-  background-color: hsl(30, 54%, 84%);
+  background-color: var(--key-main-bg);
   border: none;
   border-radius: 5px;
-  box-shadow: 0 2px hsl(28, 16%, 65%);
+  box-shadow: 0 2px var(--key-main-shadow);
   font-family: "League Spartan", sans-serif;
   font-size: 2rem;
   font-weight: 700;
@@ -126,7 +184,7 @@ button {
 }
 
 button:hover {
-  background-color: hsl(30, 25%, 89%);
+  background-color: var(--number-hover);
   cursor: pointer;
 }
 
@@ -139,17 +197,17 @@ button:hover {
   width: 100%;
   height: 35px;
   font-size: 1.25rem;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(6, 63%, 50%);
-  box-shadow: 0 2px hsl(6, 70%, 34%);
+  color: var(--text-white);
+  background-color: var(--key-equals-bg);
+  box-shadow: 0 2px var(--key-equals-shadow);
 }
 
 #delete,
 #reset {
   font-size: 1.25rem;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(225, 21%, 49%);
-  box-shadow: 0 2px hsl(224, 28%, 35%);
+  color: var(--text-white);
+  background-color: var(--key-reset-bg);
+  box-shadow: 0 2px var(--key-reset-shadow);
 }
 
 #delete:hover,
@@ -159,4 +217,11 @@ button:hover {
 
 #equal:hover {
   background-color: hsl(6, 92%, 65%);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 80%;
+    height: 100vh;
+  }
 }
