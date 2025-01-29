@@ -210,6 +210,21 @@ const states = {
 };
 let state = states.start;
 
+// Format large numbers into exponential notation
+function formatLargeNumber(numStr) {
+  const threshold = 8; // Numbers with more than 8 digits will be converted to exponential
+  if (
+    numStr.length > threshold &&
+    !numStr.includes("e") &&
+    !numStr.includes(".")
+  ) {
+    const num = parseFloat(numStr);
+    const exponential = num.toExponential(3); // Convert to exponential with 3 decimal places
+    return exponential.replace(/\.0+e/, "e").replace(/e-0$/, "e-");
+  }
+  return numStr;
+}
+
 // Theme switching logic
 function setTheme() {
   const themeInput = document.querySelector("#theme-slider");
@@ -232,7 +247,13 @@ function updateDisplay() {
     displayStr = `${operant1} ${operator} ${currentOperand}`;
   }
 
-  displayElement.textContent = displayStr;
+  // Format large numbers
+  if (displayStr && !displayStr.includes(' ') && !displayStr.includes('e')) {
+    const formatted = formatLargeNumber(displayStr);
+    displayElement.textContent = formatted;
+  } else {
+    displayElement.textContent = displayStr;
+  }
 }
 
 // Clear the calculator
