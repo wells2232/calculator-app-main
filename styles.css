@@ -225,3 +225,54 @@ button:hover {
     height: 100vh;
   }
 }
+
+@media (prefers-color-scheme: light) {
+
+  [data-theme="theme-2"] {
+    --main-bg: hsl(0, 0%, 90%);
+    --toggle-bg: hsl(0, 5%, 81%);
+    --keypad-bg: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+    --key-reset-bg: hsl(185, 42%, 37%);
+    --key-reset-shadow: hsl(185, 58%, 25%);
+    --key-equals-bg: hsl(25, 98%, 40%);
+    --key-equals-shadow: hsl(25, 99%, 27%);
+    --key-main-bg: hsl(29, 36%, 86%);
+    --key-main-shadow: hsl(35, 11%, 61%);
+    --number-hover: hsl(45, 7%, 89%);
+    --text-primary: hsl(60, 10%, 19%);
+    --text-white: hsl(0, 0%, 100%);
+  }
+
+  body {
+    background-color: var(--main-bg);
+  }
+
+  
+
+  .calculator {
+    background-color: var(--keypad-bg);
+  }
+
+  
+
+  button {
+    background-color: var(--key-main-bg);
+    box-shadow: 0 2px var(--key-main-shadow);
+    color: var(--text-primary);
+  }
+
+  #equal {
+    background-color: var(--key-equals-bg);
+    box-shadow: 0 2px var(--key-equals-shadow);
+  }
+
+  #delete,
+  #reset {
+    background-color: var(--key-reset-bg);
+    box-shadow: 0 2px var(--key-reset-shadow);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+}

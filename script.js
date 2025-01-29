@@ -210,6 +210,17 @@ const states = {
 };
 let state = states.start;
 
+const themeInput = document.querySelector("#theme-slider");
+
+const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
+if (prefersLightScheme.matches) {
+  document.body.setAttribute("data-theme", "theme-2");
+  themeInput.value = "2";
+} else {
+  document.body.setAttribute("data-theme", "theme-1");
+  themeInput.value = "1";
+}
+
 // Format large numbers into exponential notation
 function formatLargeNumber(numStr) {
   const threshold = 8; // Numbers with more than 8 digits will be converted to exponential
@@ -227,9 +238,9 @@ function formatLargeNumber(numStr) {
 
 // Theme switching logic
 function setTheme() {
-  const themeInput = document.querySelector("#theme-slider");
-  const theme = themeInput.value;
+  let theme = themeInput.value;
   document.body.setAttribute("data-theme", `theme-${theme}`);
+  console.log(theme);
 }
 
 // Update the display with the current value
@@ -248,7 +259,7 @@ function updateDisplay() {
   }
 
   // Format large numbers
-  if (displayStr && !displayStr.includes(' ') && !displayStr.includes('e')) {
+  if (displayStr && !displayStr.includes(" ") && !displayStr.includes("e")) {
     const formatted = formatLargeNumber(displayStr);
     displayElement.textContent = formatted;
   } else {
