@@ -47,15 +47,12 @@ Users should be able to:
 
 ### What I learned
 
-I've learned to make use of themes in CSS, using CSS variable and data-theme, also improved my JavaScript skills by creating the calculator logic, expecially in the numberPressed() function, which I was struggling with numbers not showing the in calculator.
+I've learned to make use of themes in CSS, using CSS variables and data-theme, also improved my JavaScript skills by creating the calculator logic, expecially in the numberPressed() function, which I was struggling with numbers not showing the in calculator.
 
 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
+- Website - [Wellington Lopes Nunes](https://wellington-lopes-portfolio.vercel.app/)
+- Frontend Mentor - [@wells2232](https://www.frontendmentor.io/profile/wells2232)
+- Twitter - [@wellindo_](https://x.com/wellindo_)
